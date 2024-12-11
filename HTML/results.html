@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voting Results</title>
+  <link rel="stylesheet" href="./../CSS/style.css">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1f2253, #0c0f53);
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    nav {
+      background: linear-gradient(90deg, #1a0971, #4b0082);
+      color: #d3d3f9;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    nav h1 {
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #cbc8e7;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffd700;
+      transform: scale(1.1);
+    }
+
+    .container {
+      max-width: 700px;
+      margin-left : 700px;
+      margin-right: 50px;
+      align-items: center;
+      margin-top:250px ;
+      margin-bottom: 300px;
+      padding: 50px;
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h2 {
+      font-size: 36px;
+      color: #4e54c8;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    table th, table td {
+      padding: 15px;
+      text-align: center;
+      border: 1px solid #ddd;
+      font-size: 18px;
+    }
+
+    table th {
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      color: #fff;
+      font-weight: bold;
+    }
+
+    table tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+
+    table tr:hover {
+      background: #f1f1f1;
+    }
+
+    .progress {
+      height: 20px;
+      background: #e0e0e0;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-inner {
+      height: 100%;
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      transition: width 0.5s ease;
+    }
+
+    #about {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #2171c4, #14467b);
+  color: #f1f1f1;
+}
+
+#about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: white;
+  font-weight: bold;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+#about p {
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: 20px;
+  line-height: 1.8;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      background: #1a0971;
+      color: #cbc8e7;
+    }
+
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>Online Election System</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="voting.html">Vote</a></li>
+      <li><a href="#">Results</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Election Results</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Candidate</th>
+          <th>Votes</th>
+          <th>Percentage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Candidate A</td>
+          <td>500</td>
+          <td>
+            <div class="progress">
+              <div class="progress-inner" style="width: 50%;"></div>
+            </div>
+            50%
+          </td>
+        </tr>
+        <tr>
+          <td>Candidate B</td>
+          <td>300</td>
+          <td>
+            <div class="progress">
+              <div class="progress-inner" style="width: 30%;"></div>
+            </div>
+            30%
+          </td>
+        </tr>
+        <tr>
+          <td>Candidate C</td>
+          <td>200</td>
+          <td>
+            <div class="progress">
+              <div class="progress-inner" style="width: 20%;"></div>
+            </div>
+            20%
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <section id="about" style="padding: 50px 20px; text-align: center; background-color: #2168b5;">
+    <h2>About the Online Election System</h2>
+    <p style="max-width: 800px; margin: 20px auto; font-size: 18px; line-height: 1.6;">
+      The Online Election System is designed to make voting more accessible and secure. With this platform, voters can participate in elections without the need for physical polling stations, ensuring convenience and privacy. Join us in modernizing the election process!
+    </p>
+  </section>
+
+
+  <footer>
+    <p>&copy; 2024 Online Election System | <a href="#">Terms & Conditions</a></p>
+  </footer>
+</body>
+</html>
